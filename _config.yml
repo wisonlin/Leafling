@@ -1,0 +1,105 @@
+# Page title
+page_title: Leafling
+url: https://wisonlin.github.io
+baseurl: /Leafling
+
+# App Info
+ios_app_id:
+ios_app_country: us
+appstore_link:
+playstore_link:
+presskit_download_link:
+
+app_icon: assets/appicon.png
+app_name: Leafling
+app_price: Free
+app_description: Build tiny web apps with AI, preview them instantly, and keep improving them on your device.
+enable_smart_app_banner: false
+
+# Information About Yourself
+your_name: Wison Lin
+your_link: https://github.com/wisonlin
+your_city:
+email_address: limwihing@gmail.com
+linkedin_username:
+linkedin_company:
+facebook_username:
+instagram_username:
+twitter_username:
+github_username: wisonlin
+youtube_username:
+mastodon_link:
+
+# Feature List
+features:
+  - title: Create With AI
+    description: Describe an idea in natural language and turn it into a working local web app project.
+    fontawesome_icon_name: magic
+
+  - title: Preview Instantly
+    description: Run generated HTML, CSS, and JavaScript inside Leafling's built-in iOS preview.
+    fontawesome_icon_name: mobile-alt
+
+  - title: Learn By Iterating
+    description: Keep refining each project through chat and inspect how small changes affect the result.
+    fontawesome_icon_name: code
+
+  - title: Native Starters
+    description: Try built-in examples that connect web apps to user-controlled iPhone capabilities.
+    fontawesome_icon_name: plug
+
+  - title: Local Projects
+    description: Generated projects and files are stored on your device for private learning and prototyping.
+    fontawesome_icon_name: folder-open
+
+  - title: Bring Your Provider
+    description: Configure your own compatible AI API key, base URL, and model in Settings.
+    fontawesome_icon_name: key
+
+# Theme Settings
+topbar_color: "#0f172a"
+topbar_transparency: 0.08
+topbar_title_color: "#ffffff"
+
+cover_image: assets/headerimage.png
+cover_overlay_color: "#111827"
+cover_overlay_transparency: 0.72
+
+device_color: black
+body_background_color: "#f8fafc"
+
+link_color: "#4f46e5"
+
+app_title_color: "#ffffff"
+app_price_color: "#dbeafe"
+app_description_color: "#eef2ff"
+
+feature_title_color: "#111827"
+feature_text_color: "#4b5563"
+
+feature_icons_foreground_color: "#4f46e5"
+feature_icons_background_color: "#eef2ff"
+
+social_icons_foreground_color: "#4b5563"
+social_icons_background_color: "#e5e7eb"
+
+footer_text_color: "#6b7280"
+
+####################################################
+### Jekyll Configuration. No need to touch this. ###
+####################################################
+
+sass:
+  style: :compressed
+
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+markdown: kramdown
