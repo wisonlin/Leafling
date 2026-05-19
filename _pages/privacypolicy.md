@@ -5,7 +5,7 @@ include_in_header: true
 ---
 
 **Last updated**  
-April 23, 2026
+May 19, 2026
 
 # Privacy Policy
 
@@ -13,15 +13,15 @@ Leafling is designed for local learning, experimentation, and lightweight web ap
 
 ## Information You Provide
 
-Leafling may store the model provider, base URL, model name, prompts, generated project files, and project history that you create in the app.
+Leafling may store prompts, generated project files, project history, ChatGPT account status, and model preferences that you create or choose in the app.
 
-API keys are stored in the iOS Keychain. Base URL and model settings are stored on your device.
+ChatGPT OAuth tokens are stored in the iOS Keychain. Basic account metadata and model preferences are stored locally on your device.
 
-## AI Provider Requests
+## AI Requests
 
-When you start an AI generation or editing request, Leafling may send your prompt, relevant conversation context, and project files to the AI provider that you configured in Settings.
+When you start an AI generation or editing request, Leafling may send your prompt, relevant conversation context, and project files to ChatGPT so it can generate or revise your local project.
 
-Leafling does not provide its own first-party AI account or backend for generation in the current version. The provider, API key, base URL, and model are controlled by you.
+Leafling does not require you to paste an API key, base URL, or provider configuration in the current version. ChatGPT sign-in is managed through a secure web sign-in flow.
 
 ## Local Project Storage
 
@@ -29,19 +29,25 @@ Generated projects and files are stored locally on your device. Leafling does no
 
 ## Device Permissions
 
-Some built-in examples or generated projects may request iOS permissions, such as camera, photo library, microphone, speech recognition, location, calendar, reminders, motion, Face ID, or Health access.
+Some built-in examples or generated projects may request iOS permissions, such as camera, photo library, microphone, speech recognition, location, calendar, reminders, motion, or Face ID access.
 
 Permission prompts are shown by iOS and are controlled by you. Leafling requests these permissions only when you interact with a feature that needs them.
 
-## Health Data
+## Motion & Fitness Data
 
-Leafling may read Apple Health step count data only in the built-in Step Coach health and fitness example, after you explicitly choose to connect Apple Health and grant permission.
+Leafling may read step count or distance estimates from the device pedometer only after you explicitly interact with an example or generated project that requests Motion & Fitness access.
 
-Leafling does not use Health data for advertising, analytics, tracking, or sale. The current version does not write Health data.
+Leafling does not use Motion & Fitness data for advertising, analytics, tracking, or sale.
+
+## Usage Analytics
+
+Leafling may send limited usage analytics to PostHog Cloud to help us understand whether core flows are working. These events can include app launch, foreground, tab selection, onboarding, example preview, Use This, project creation, chat submission status, agent run result, app open, app share, `.leafling` import result, key Bridge API outcome, ChatGPT sign-in outcome, model tier selection, paywall, and purchase or restore results.
+
+Usage analytics use an anonymous install identifier and basic technical context such as app version, build number, device model, OS version, locale, and time zone. Leafling does not send prompts, project names, generated app files, ChatGPT emails, OAuth tokens, Bridge parameters, photos, contacts, calendar data, location, or other permission payloads in usage analytics.
 
 ## Tracking and Advertising
 
-Leafling does not include third-party advertising or tracking in the current version.
+Leafling does not include third-party advertising or cross-app tracking in the current version.
 
 ## Support
 

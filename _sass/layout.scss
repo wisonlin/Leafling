@@ -39,12 +39,14 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 115px 876px auto auto;
+	grid-template-rows: 115px 876px auto auto auto auto;
 	grid-column-gap: 30px;
 	grid-template-areas: 
 		"h h h h h h h h h h h h"
 		"p p p p p i i i i i i i"
 		"c c c c c c c c c c c c"
+		"s s s s s s s s s s s s"
+		"w w w w w w w w w w w w"
 		"f f f f f f f f f f f f";
 }
 
@@ -71,6 +73,8 @@
 			"i i i i i i i i i i i i"
 			"p p p p p p p p p p p p"
 			"c c c c c c c c c c c c"
+			"s s s s s s s s s s s s"
+			"w w w w w w w w w w w w"
 			"f f f f f f f f f f f f";
 	}
 }
@@ -532,6 +536,162 @@ nav > ul li a:active {
 	line-height: 1.5;
 }
 
+.scenarioSection {
+	grid-area: s;
+	margin-top: 90px;
+}
+
+.howSection {
+	grid-area: w;
+	margin-top: 84px;
+}
+
+.sectionIntro {
+	max-width: 760px;
+}
+
+.sectionKicker {
+	color: $accent-color;
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.sectionIntro h2 {
+	color: $feature-title-color;
+	font-size: 4.2rem;
+	line-height: 1.08;
+	margin-top: 12px;
+}
+
+.sectionIntro p:last-child {
+	color: $feature-text-color;
+	font-size: 2rem;
+	line-height: 1.55;
+	margin-top: 18px;
+}
+
+.scenarioGrid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 18px;
+	margin-top: 36px;
+}
+
+.scenarioCard {
+	background: #fff;
+	border: 1px solid rgba(#111827, 0.08);
+	border-radius: 24px;
+	box-shadow: 0 18px 40px rgba(#111827, 0.06);
+	padding: 28px;
+	min-height: 300px;
+}
+
+.scenarioIcon {
+	align-items: center;
+	border-radius: 18px;
+	color: #fff;
+	display: inline-flex;
+	height: 54px;
+	justify-content: center;
+	width: 54px;
+}
+
+.scenarioCard.photo .scenarioIcon {
+	background: #f59e0b;
+}
+
+.scenarioCard.voice .scenarioIcon {
+	background: #2563eb;
+}
+
+.scenarioCard.plan .scenarioIcon {
+	background: #14b8a6;
+}
+
+.scenarioCard h3 {
+	color: $feature-title-color;
+	font-size: 2.5rem;
+	line-height: 1.16;
+	margin-top: 24px;
+}
+
+.scenarioCard p {
+	color: $feature-text-color;
+	line-height: 1.5;
+	margin-top: 12px;
+}
+
+.scenarioCard strong {
+	color: $feature-title-color;
+	display: block;
+	font-size: 1.5rem;
+	line-height: 1.4;
+	margin-top: 22px;
+}
+
+.stepList {
+	display: grid;
+	gap: 16px;
+	list-style: none;
+	margin-top: 34px;
+	max-width: 860px;
+}
+
+.stepList li {
+	align-items: flex-start;
+	background: #fff;
+	border: 1px solid rgba(#111827, 0.08);
+	border-radius: 22px;
+	display: grid;
+	grid-template-columns: 48px 1fr;
+	gap: 18px;
+	padding: 24px;
+}
+
+.stepList span {
+	align-items: center;
+	background: rgba($accent-color, 0.10);
+	border-radius: 14px;
+	color: $accent-color;
+	display: flex;
+	font-weight: 800;
+	height: 48px;
+	justify-content: center;
+	width: 48px;
+}
+
+.stepList h3,
+.trustPanel h3 {
+	color: $feature-title-color;
+	font-size: 2.3rem;
+	line-height: 1.18;
+}
+
+.stepList p,
+.trustPanel p {
+	color: $feature-text-color;
+	line-height: 1.5;
+	margin-top: 8px;
+}
+
+.trustPanel {
+	background: #111827;
+	border-radius: 28px;
+	margin-top: 28px;
+	max-width: 860px;
+	padding: 30px;
+}
+
+.trustPanel h3 {
+	color: #fff;
+}
+
+.trustPanel p {
+	color: rgba(#fff, 0.74);
+}
+
 @media only screen and (max-width: 992px) {
 
 	.features {
@@ -563,6 +723,23 @@ nav > ul li a:active {
 	
 	.feature:nth-child(3n+1) {
 		padding-left: 15px;
+	}
+
+	.scenarioSection,
+	.howSection {
+		margin-top: 58px;
+	}
+
+	.sectionIntro h2 {
+		font-size: 3.2rem;
+	}
+
+	.scenarioGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.scenarioCard {
+		min-height: 0;
 	}
 	
 }

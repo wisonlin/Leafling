@@ -13,7 +13,7 @@ presskit_download_link:
 app_icon: assets/appicon.png
 app_name: Leafling
 app_price: Free
-app_description: Build tiny web apps with AI, preview them instantly, and keep improving them on your device.
+app_description: Make a tiny personal iPhone app from your camera roll. Start with Photo Wall, then keep or remix what feels useful.
 enable_smart_app_banner: false
 
 # Information About Yourself
@@ -32,29 +32,29 @@ mastodon_link:
 
 # Feature List
 features:
-  - title: Create With AI
-    description: Describe an idea in natural language and turn it into a working local web app project.
+  - title: Start With Photo Wall
+    description: Turn recent camera roll moments into a tiny personal app you can keep and reopen.
+    fontawesome_icon_name: images
+
+  - title: Remix For Your Photos
+    description: Adapt the example for trips, family moments, screenshots, references, or weekly favorites.
     fontawesome_icon_name: magic
 
-  - title: Preview Instantly
-    description: Run generated HTML, CSS, and JavaScript inside Leafling's built-in iOS preview.
+  - title: Try Before Sign-In
+    description: Preview official examples first. Connect an existing ChatGPT account only when you want to create or edit.
+    fontawesome_icon_name: key
+
+  - title: User-Triggered Access
+    description: Photos and other native features are used only after you tap an action and grant permission.
     fontawesome_icon_name: mobile-alt
 
-  - title: Learn By Iterating
-    description: Keep refining each project through chat and inspect how small changes affect the result.
-    fontawesome_icon_name: code
-
-  - title: Native Starters
-    description: Try built-in examples that connect web apps to user-controlled iPhone capabilities.
-    fontawesome_icon_name: plug
-
-  - title: Local Projects
-    description: Generated projects and files are stored on your device for private learning and prototyping.
+  - title: Keep Tiny Helpers
+    description: Save up to 3 user-owned tiny apps for free, open them again, and keep the ones that matter.
     fontawesome_icon_name: folder-open
 
-  - title: Bring Your Provider
-    description: Configure your own compatible AI API key, base URL, and model in Settings.
-    fontawesome_icon_name: key
+  - title: One-to-One Sharing
+    description: Share a .leafling file privately; imported shared apps use saved-app slots.
+    fontawesome_icon_name: share-alt
 
 # Theme Settings
 topbar_color: "#0f172a"

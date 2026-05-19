@@ -23,11 +23,15 @@ Please include:
 
 ### Do I need an API key?
 
-Yes. To generate or edit projects with AI, open Settings in Leafling and enter a compatible Provider, API Key, Base URL, and Model.
+No. To generate or edit projects with AI, open Settings in Leafling and sign in with ChatGPT.
 
-### Where is my API key stored?
+### Where is my ChatGPT sign-in stored?
 
-Your API key is stored in the iOS Keychain. Base URL and model settings are stored locally on your device.
+ChatGPT OAuth tokens are stored in the iOS Keychain. Basic account details, such as account status and model preference, are stored locally on your device.
+
+### What is sent to ChatGPT?
+
+When you start a generation or editing request, Leafling may send your prompt, relevant conversation context, and project files to ChatGPT so it can create or revise the local preview.
 
 ### Where are generated projects stored?
 
@@ -37,6 +41,6 @@ Generated projects and files are stored locally on your device. Leafling does no
 
 Some examples show how a web app can connect to native iPhone capabilities. Permissions are requested only when you interact with a feature that needs them, and iOS controls the permission prompt.
 
-### How do I test HealthKit in review?
+### Why do examples ask for Motion & Fitness access?
 
-Open the built-in Step Coach example, then tap Connect Apple Health or Refresh Steps. Leafling reads Apple Health step count data only after permission is granted.
+The built-in Step Coach example can read today's step count from the device pedometer. Motion & Fitness permission is requested only after you tap a button that needs it.
