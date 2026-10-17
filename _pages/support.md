@@ -23,7 +23,7 @@ Please include:
 
 ### Do I need an API key?
 
-No. To generate or edit projects with AI, open Settings in Leafling and sign in with ChatGPT.
+No. To send AI messages or create and edit apps with AI, open Settings in Leafling and connect an existing ChatGPT account. You can browse examples, write drafts, and open saved local apps before signing in. AI features inside examples or saved apps also require a connected account.
 
 ### Where is my ChatGPT sign-in stored?
 
@@ -31,11 +31,11 @@ ChatGPT OAuth tokens are stored in the iOS Keychain. Basic account details, such
 
 ### What is sent to ChatGPT?
 
-When you start a generation or editing request, Leafling may send your prompt, relevant conversation context, and project files to ChatGPT so it can create or revise the local preview.
+When you send an AI message, Leafling sends your message and relevant conversation context to ChatGPT. App creation or editing may also send relevant project files. If you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent. Unsent drafts remain local.
 
 ### Where are generated projects stored?
 
-Generated projects and files are stored locally on your device. Leafling does not publish them to a public app marketplace.
+Your conversations, drafts, saved apps, and version history are stored locally on your device. Leafling does not publish them to a public app marketplace.
 
 ### Why do examples ask for permissions?
 

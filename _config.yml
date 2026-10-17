@@ -41,7 +41,7 @@ features:
     fontawesome_icon_name: magic
 
   - title: Try Before Sign-In
-    description: Preview official examples first. Connect an existing ChatGPT account only when you want to create or edit.
+    description: Preview official examples first. Connect an existing ChatGPT account when you send an AI message or create and edit an app.
     fontawesome_icon_name: key
 
   - title: User-Triggered Access

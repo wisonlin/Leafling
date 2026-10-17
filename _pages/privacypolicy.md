@@ -5,7 +5,7 @@ include_in_header: true
 ---
 
 **Last updated**  
-May 19, 2026
+October 18, 2026
 
 # Privacy Policy
 
@@ -13,19 +13,19 @@ Leafling is designed for local learning, experimentation, and lightweight web ap
 
 ## Information You Provide
 
-Leafling may store prompts, generated project files, project history, ChatGPT account status, and model preferences that you create or choose in the app.
+Leafling may store your conversations, drafts, prompts, generated app files, version history, ChatGPT account status, and model preferences locally on your device.
 
 ChatGPT OAuth tokens are stored in the iOS Keychain. Basic account metadata and model preferences are stored locally on your device.
 
 ## AI Requests
 
-When you start an AI generation or editing request, Leafling may send your prompt, relevant conversation context, and project files to ChatGPT so it can generate or revise your local project.
+When you send an AI message, Leafling sends your message and relevant conversation context to ChatGPT to produce a reply. If you ask it to create or edit an app, relevant project files may also be sent. When you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent to ChatGPT. Unsent drafts are stored locally and are not sent as AI requests.
 
 Leafling does not require you to paste an API key, base URL, or provider configuration in the current version. ChatGPT sign-in is managed through a secure web sign-in flow.
 
 ## Local Project Storage
 
-Generated projects and files are stored locally on your device. Leafling does not publish your generated projects to a public marketplace or server.
+Conversations, drafts, saved apps, and version history are stored locally on your device. Leafling does not publish your generated apps to a public marketplace or server.
 
 ## Device Permissions
 
