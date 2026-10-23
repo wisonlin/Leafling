@@ -1,0 +1,10 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>{{ '/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/support/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/privacypolicy/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/changelog/' | absolute_url }}</loc></url>
+</urlset>

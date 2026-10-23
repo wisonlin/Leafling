@@ -2,10 +2,31 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% if page.review_only %}<meta name="robots" content="noindex, nofollow">{% endif %}
 	<base target="_blank">
 
-	<title class="pageTitle">{{ site.page_title }}</title>
-	<meta name="description" content="{{ site.app_description }}">
+	{% assign seo_title = site.page_title %}
+	{% if page.title %}{% assign seo_title = page.title | append: ' | Leafling' %}{% endif %}
+	{% assign seo_description = page.description | default: site.app_description %}
+	{% case page.url %}
+		{% when '/support/' %}{% assign seo_description = 'Get help with Leafling: ChatGPT connection, local app storage, device permissions, and how to contact support.' %}
+		{% when '/privacypolicy/' %}{% assign seo_description = 'Read how Leafling handles local app data, ChatGPT requests, device permissions, and usage analytics.' %}
+		{% when '/changelog/' %}{% assign seo_description = 'Read past release notes for Leafling, the personal web app builder for iPhone and iPad.' %}
+	{% endcase %}
+	{% assign social_image = page.social_image | default: site.app_icon %}
+	<title class="pageTitle">{{ seo_title | escape }}</title>
+	<meta name="description" content="{{ seo_description | escape }}">
+	<link rel="canonical" href="{{ page.url | absolute_url }}">
+	<meta property="og:title" content="{{ seo_title | escape }}">
+	<meta property="og:description" content="{{ seo_description | escape }}">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Leafling">
+	<meta property="og:url" content="{{ page.url | absolute_url }}">
+	<meta property="og:image" content="{{ social_image | absolute_url }}">
+	<meta name="twitter:card" content="{% if page.social_image %}summary_large_image{% else %}summary{% endif %}">
+	<meta name="twitter:title" content="{{ seo_title | escape }}">
+	<meta name="twitter:description" content="{{ seo_description | escape }}">
+	<meta name="twitter:image" content="{{ social_image | absolute_url }}">
 
 	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
 

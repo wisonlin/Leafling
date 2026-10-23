@@ -35,7 +35,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <img class="appIconLarge" src="{{ site.app_icon | relative_url }}">
+                            <img class="appIconLarge" src="{{ site.app_icon | relative_url }}" alt="Leafling app icon">
                         </div>
                         <div class="appNamePriceContainer">
                             <h1 class="appName">
@@ -55,7 +55,7 @@
                                 <a class="playStoreLink" href="{{site.playstore_link}}"><img class="playStore" src="assets/playstore.png"></a>
                             {% endif %}
                             {% if site.appstore_link %}
-                                <a class="appStoreLink" href="{{site.appstore_link}}"><img class="appStore" src="assets/appstore.png"></a>
+                                <a class="appStoreLink" href="{{ site.appstore_link }}" rel="noopener" aria-label="Download Leafling on the App Store"><img class="appStore" src="{{ '/assets/appstore.png' | relative_url }}" alt="Download on the App Store" width="220" height="75"></a>
                             {% endif %}
                         </div>
                     </div>

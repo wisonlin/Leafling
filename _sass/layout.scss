@@ -374,7 +374,12 @@ nav > ul li a:active {
 	
 } 
 
+.appStoreLink {
+	display: inline-flex;
+}
+
 .appStore {
+	display: block;
 	height: 75px;
 }
 

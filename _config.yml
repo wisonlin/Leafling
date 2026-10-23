@@ -1,19 +1,19 @@
 # Page title
-page_title: Leafling
+page_title: Leafling — Personal App Builder for iPhone & iPad
 url: https://wisonlin.github.io
 baseurl: /Leafling
 
 # App Info
-ios_app_id:
+ios_app_id: 6762119069
 ios_app_country: us
-appstore_link:
+appstore_link: https://apps.apple.com/us/app/leafling/id6762119069
 playstore_link:
 presskit_download_link:
 
 app_icon: assets/appicon.png
 app_name: Leafling
 app_price: Free
-app_description: Make a tiny personal iPhone app from your camera roll. Start with Photo Wall, then keep or remix what feels useful.
+app_description: Make personal web apps on iPhone and iPad with Leafling. Try examples free, then use your existing ChatGPT account to create tools that run inside Leafling.
 enable_smart_app_banner: false
 
 # Information About Yourself
@@ -32,16 +32,16 @@ mastodon_link:
 
 # Feature List
 features:
-  - title: Start With Photo Wall
-    description: Turn recent camera roll moments into a tiny personal app you can keep and reopen.
+  - title: Try Ready-Made Examples
+    description: Explore Photo Wall, Voice Note, and Leave Reminder before making your own tiny tool.
     fontawesome_icon_name: images
 
-  - title: Remix For Your Photos
-    description: Adapt the example for trips, family moments, screenshots, references, or weekly favorites.
+  - title: Make It Your Own
+    description: Describe a personal tool or ask for changes to an example. Create and refine it through chat.
     fontawesome_icon_name: magic
 
   - title: Try Before Sign-In
-    description: Preview official examples first. Connect an existing ChatGPT account when you send an AI message or create and edit an app.
+    description: Preview official examples first. Connect an existing ChatGPT account to generate or edit apps; your account usage limits apply.
     fontawesome_icon_name: key
 
   - title: User-Triggered Access
@@ -49,11 +49,11 @@ features:
     fontawesome_icon_name: mobile-alt
 
   - title: Keep Tiny Helpers
-    description: Save up to 3 user-owned tiny apps for free, open them again, and keep the ones that matter.
+    description: Keep your personal tools on your device and reopen them from Apps inside Leafling.
     fontawesome_icon_name: folder-open
 
   - title: One-to-One Sharing
-    description: Share a .leafling file privately; imported shared apps use saved-app slots.
+    description: Share a .leafling file directly. Imported apps open in Private Preview with sample data.
     fontawesome_icon_name: share-alt
 
 # Theme Settings

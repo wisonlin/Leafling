@@ -1,25 +1,27 @@
-# Leafling Landing Page
+# Leafling
 
-This folder contains a GitHub Pages/Jekyll landing page for Leafling, based on [`emilbaehr/automatic-app-landing-page`](https://github.com/emilbaehr/automatic-app-landing-page).
+Make personal web apps on iPhone and iPad. Try ready-made examples such as Photo Wall, Voice Note, and Leave Reminder, keep a useful tool, and use an existing ChatGPT account to create or change your own.
 
-## Before Publishing
+- [Download Leafling on the App Store](https://apps.apple.com/us/app/leafling/id6762119069)
+- [Visit the website](https://wisonlin.github.io/Leafling/)
+- [Get support](https://wisonlin.github.io/Leafling/support/)
+- [Privacy policy](https://wisonlin.github.io/Leafling/privacypolicy/)
 
-1. If the App Store listing is live, set `ios_app_id` or `appstore_link` in `_config.yml`.
-2. Publish this folder as the root of the GitHub Pages repository, or copy it into the Pages repo that will host the Leafling site.
+Leafling is free to download. AI generation and editing require an existing ChatGPT account; its usage limits apply. Generated apps run inside Leafling. They are personal web apps, not standalone iOS apps for App Store distribution.
 
-Recommended URLs after publishing to the `wisonlin/Leafling` GitHub Pages repository:
+This repository contains the public website and support pages. It does not contain the Leafling iOS app source code.
 
-- Marketing URL: `https://wisonlin.github.io/Leafling/`
-- Support URL: `https://wisonlin.github.io/Leafling/support/`
-- Privacy Policy URL: `https://wisonlin.github.io/Leafling/privacypolicy/`
+## Website development
 
-## Local Build
+GitHub Pages publishes the root of the `main` branch. The site uses Jekyll with `url: https://wisonlin.github.io` and `baseurl: /Leafling`.
 
-The template uses the `github-pages` gem. On machines with a current Ruby environment:
+With a compatible Ruby environment:
 
-```bash
+```sh
 bundle install
-bundle exec jekyll build
+bundle exec jekyll serve
 ```
 
-The current macOS system Ruby in this workspace is too old for the latest transitive dependencies, so GitHub Pages should be used as the source of truth for final rendering unless a newer local Ruby is selected.
+The App Store link is configured in `_config.yml` and rendered in the HTML without requiring an Apple API response. `sitemap.xml` lists the four public pages; update it when public routes change.
+
+The website is based on [Automatic App Landing Page by Emil Baehr](https://github.com/emilbaehr/automatic-app-landing-page), under the [MIT license](LICENSE). That attribution applies to the website template, not the Leafling iOS app.
