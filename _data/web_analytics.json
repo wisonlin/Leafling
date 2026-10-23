@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "host": "https://us.i.posthog.com",
+  "public_project_token": "phc_AhCF2y36GhPXJd4ow4RHkAXYogdojiciPhpLgdRQATaJ"
+}

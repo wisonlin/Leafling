@@ -5,7 +5,7 @@ include_in_header: true
 ---
 
 **Last updated**  
-October 18, 2026
+October 24, 2026
 
 # Privacy Policy
 
@@ -44,6 +44,16 @@ Leafling does not use Motion & Fitness data for advertising, analytics, tracking
 Leafling may send limited usage analytics to PostHog Cloud to help us understand whether core flows are working. These events can include app launch, foreground, tab selection, onboarding, example preview, Use This, project creation, chat submission status, agent run result, app open, app share, `.leafling` import result, key Bridge API outcome, ChatGPT sign-in outcome, model tier selection, paywall, and purchase or restore results.
 
 Usage analytics use an anonymous install identifier and basic technical context such as app version, build number, device model, OS version, locale, and time zone. Leafling does not send prompts, project names, generated app files, ChatGPT emails, OAuth tokens, Bridge parameters, photos, contacts, calendar data, location, or other permission payloads in usage analytics.
+
+## Website Analytics
+
+On this website, optional analytics run only after you choose **Allow analytics**. You can refuse or withdraw through **Analytics choices**. We also respect Do Not Track, Global Privacy Control, and an explicit `analytics=off` link option. Refusing does not block downloads or other site features.
+
+With your permission, we send page-visit and App Store-link click events to PostHog Cloud. Each event contains only an approved page path, predefined channel/campaign/content labels, the click location, an internal-test flag, a timestamp, and a random identifier held in memory for that page visit. We store only your analytics preference in this browser; we do not store a visitor identifier, set analytics cookies, fingerprint your device, record sessions, or automatically capture other interactions. Counts therefore describe opted-in events and page visits, not unique people.
+
+We do not send full URLs, query strings, referrers, free-form tracking values, account details, or page content as analytics properties. Network requests necessarily reach PostHog with network information; we disable geographic enrichment and person-profile creation and do not use network information to match website visits to app installations.
+
+Approved App Store links may include Apple's provider and campaign labels after you allow analytics. Apple's aggregate campaign reports are separate from website counts and anonymous iOS usage events. We do not join them into individual journeys or infer which person installed or purchased the app. Earlier links without these labels cannot be attributed retroactively.
 
 ## Tracking and Advertising
 

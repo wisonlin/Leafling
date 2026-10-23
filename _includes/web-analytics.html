@@ -1,0 +1,5 @@
+{% if page.review_only != true %}
+<link rel="stylesheet" href="{{ '/assets/web-analytics.css' | relative_url }}">
+<script id="leafling-analytics-config" type="application/json">{"analytics":{{ site.data.web_analytics | jsonify }},"registry":{{ site.data.growth_channels | jsonify }}}</script>
+<script defer src="{{ '/assets/web-analytics.js' | relative_url }}"></script>
+{% endif %}
