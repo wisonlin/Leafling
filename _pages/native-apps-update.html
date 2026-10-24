@@ -1,0 +1,52 @@
+---
+layout: null
+permalink: /updates/native-personal-apps/
+title: Personal apps, connected to your iPhone
+description: How Leafling combines chat, personal apps, and supported native iPhone capabilities, with a real Photos example and a clearly labeled design concept.
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} · Leafling</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ page.title | escape }} · Leafling">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Leafling">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/appicon.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title | escape }} · Leafling">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:image" content="{{ '/assets/appicon.png' | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/appicon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/native-relaunch/positioning.css' | relative_url }}">
+</head>
+<body>
+<header class="site-header shell"><a class="wordmark" href="{{ '/' | relative_url }}">Leafling</a><a class="review-label" href="{{ '/support/' | relative_url }}">Support</a></header>
+<main class="update-article shell">
+  <header class="update-intro"><p class="eyebrow">Product update · October 24, 2026</p><h1>Personal apps,<br><em>connected to your iPhone.</em></h1><p class="lede">An idea in chat can become a tool you use on your phone—and keep changing when your needs change.</p></header>
+  <div class="update-prose">
+    <p>Leafling is for personal apps: the photo view, checklist, or small utility you want to shape around your own routine. Describe what you want in chat, open the result inside Leafling, then return to chat to change it. You do not need to write the code yourself.</p>
+    <h2>The connection to your phone</h2>
+    <p>The apps you create use web interfaces inside Leafling. Supported actions connect through Leafling’s JSON Bridge to native iOS SDKs. That connection lets a personal interface work with phone data and system actions, subject to the device and the access you allow.</p>
+    <p>For example, a photo app can read the Photos library within your permitted scope. A checklist can ask to add an item to Reminders after your confirmation. The interface is yours to shape; iOS still controls sensitive access.</p>
+    <h2>What we have recorded</h2>
+    <p>The video below shows the official Photo Wall example reading six test illustrations through limited Photos access, saving the example, and opening it from Apps. It is a real, continuous Simulator recording from Leafling 1.5.4 (7), a test build. Photos permission was prepared before recording.</p>
+    <p>This demonstrates the official example’s connection to Photos, saving, and first opening. It does not show ChatGPT creating the app, a Reminders write, or use on a later day.</p>
+    <figure class="proof-video update-video"><video controls playsinline preload="none" poster="{{ '/assets/native-relaunch/photo-wall-result.png' | relative_url }}" aria-label="Real Simulator recording of Photo Wall using limited Photos access"><source src="{{ '/assets/native-relaunch/photo-wall-demo.mp4' | relative_url }}" type="video/mp4"><track kind="captions" src="{{ '/assets/native-relaunch/photo-wall-demo.vtt' | relative_url }}" srclang="en" label="English" default></video><figcaption>20.2 seconds · Official example · Six test illustrations · Test build</figcaption></figure>
+    <h2>A personal workflow to explore</h2>
+    <p>A voice checklist illustrates the kind of connection we want to make easy: speak, review the transcript, choose tasks, and confirm which ones to add to Reminders. Later, return to chat to separate work and personal categories inside your own app.</p>
+    <figure class="update-concept"><figcaption class="concept-label"><strong>Design concept, not a live recording.</strong> This end-to-end workflow has not yet been tested; the system result is illustrative.</figcaption><img src="{{ '/assets/native-relaunch/native-workflow-panels-v2.png' | relative_url }}" alt="Design concept: describe a Voice List app in chat, review selected tasks, and confirm adding them to Reminders. The pictured system result is illustrative."></figure>
+    <h2>Keep changing the same app</h2>
+    <p>A personal tool does not have to be finished in one request. You can ask for a different layout, another category, or an extra supported action, then keep using the app inside Leafling. The point is a tool that fits you and can change with you.</p>
+    <p>Leafling is free to download. You can try official examples before signing in. AI chat, creation, editing, and AI features in personal apps require internet and an existing ChatGPT account; its access and usage limits apply. Generated apps run inside Leafling.</p>
+    <a class="primary-cta appStoreLink" target="_blank" href="https://apps.apple.com/us/app/leafling/id6762119069" rel="noopener">Get Leafling on the App Store <span aria-hidden="true">↗</span></a>
+  </div>
+</main>
+<footer class="shell"><span>Leafling · Apps you make your own</span><nav aria-label="Help"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/support/' | relative_url }}">Support</a><a href="{{ '/privacypolicy/' | relative_url }}">Privacy</a></nav></footer>
+</body>
+</html>

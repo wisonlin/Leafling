@@ -7,4 +7,5 @@ layout: null
   <url><loc>{{ '/support/' | absolute_url }}</loc></url>
   <url><loc>{{ '/privacypolicy/' | absolute_url }}</loc></url>
   <url><loc>{{ '/changelog/' | absolute_url }}</loc></url>
+  <url><loc>{{ '/updates/native-personal-apps/' | absolute_url }}</loc></url>
 </urlset>
