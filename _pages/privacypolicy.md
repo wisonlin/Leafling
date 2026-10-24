@@ -9,7 +9,7 @@ October 24, 2026
 
 # Privacy Policy
 
-Leafling is designed for local learning, experimentation, and lightweight web app prototyping.
+Leafling helps you create, run, and improve personal apps through chat on your iPhone or iPad.
 
 ## Information You Provide
 
@@ -27,15 +27,25 @@ Leafling does not require you to paste an API key, base URL, or provider configu
 
 Conversations, drafts, saved apps, and version history are stored locally on your device. Leafling does not publish your generated apps to a public marketplace or server.
 
+## Optional iCloud Key-Value Storage
+
+Some personal apps can use Leafling's iCloud key-value bridge to store text values in the iCloud account signed in on the device. When you choose a feature that uses this bridge, those values may be synchronized by Apple to your other devices with iCloud enabled. This does not automatically sync your Leafling conversations, app files, or version history.
+
+Cloud storage is separate from local project storage and is not a public app listing. Availability depends on your iCloud account and device settings.
+
 ## Device Permissions
 
 Some built-in examples or generated projects may request iOS permissions, such as camera, photo library, microphone, speech recognition, location, calendar, reminders, motion, or Face ID access.
 
 Permission prompts are shown by iOS and are controlled by you. Leafling requests these permissions only when you interact with a feature that needs them.
 
+Photo-library queries follow your iOS authorization. Choosing an item through the system photo picker provides that selected content; it does not grant full-library access.
+
 ## Motion & Fitness Data
 
 Leafling may read step count or distance estimates from the device pedometer only after you explicitly interact with an example or generated project that requests Motion & Fitness access.
+
+Personal apps may also use supported accelerometer, gyroscope, orientation, or battery updates. Continuous subscriptions operate while the personal app is open and Leafling is in the foreground. They stop when you leave the app page or put Leafling in the background; they do not restart automatically.
 
 Leafling does not use Motion & Fitness data for advertising, analytics, tracking, or sale.
 
