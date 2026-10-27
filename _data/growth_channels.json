@@ -103,6 +103,30 @@
       "applied_to_public_placement": false,
       "tracking_started_at": null,
       "measurement_note": "未匹配完整UTM的官网访问；包括直接访问及未知来源，不代表全部direct流量。"
+    },
+    {
+      "id": "threads",
+      "label": "Threads",
+      "medium": "social",
+      "campaign": "leafling_native_202610",
+      "content": "photo_example",
+      "landing_path": "updates/native-personal-apps/",
+      "status": "prepared",
+      "publication_url": null,
+      "submitted_at": null,
+      "enabled_since": null,
+      "cost_usd": 0,
+      "historical_attribution": false,
+      "apple_campaign_token": null,
+      "apple_link_status": "unavailable",
+      "apple_campaign_url": "https://apps.apple.com/us/app/leafling/id6762119069",
+      "link_generated": false,
+      "applied_to_public_placement": false,
+      "tracking_started_at": null,
+      "measurement_note": "Threads 来源链接已准备，尚未应用到公开帖子；只统计同意采集的网页事件，无 Apple campaign 下载归因，不追溯历史。",
+      "content_variants": [
+        "edit_same_app"
+      ]
     }
   ]
 }

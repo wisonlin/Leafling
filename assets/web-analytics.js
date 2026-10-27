@@ -6,7 +6,7 @@
   var cfg;
   try { cfg = JSON.parse(node.textContent); } catch (_) { return; }
   var settings = cfg.analytics || {}, registry = cfg.registry || {};
-  var allowedPaths = ['/Leafling/', '/Leafling/support/', '/Leafling/privacypolicy/', '/Leafling/changelog/'];
+  var allowedPaths = ['/Leafling/', '/Leafling/support/', '/Leafling/privacypolicy/', '/Leafling/changelog/', '/Leafling/updates/native-personal-apps/'];
   if (!settings.enabled || location.protocol !== 'https:' || location.hostname !== 'wisonlin.github.io' ||
       allowedPaths.indexOf(location.pathname) === -1) return;
   var params = new URLSearchParams(location.search);
@@ -20,8 +20,12 @@
   // Accept complete registry tuples only; never transmit unknown/raw UTM or referrer values.
   var channel = channels.find(function (c) {
     return c.id === params.get('utm_source') && c.medium === params.get('utm_medium') &&
-      c.campaign === params.get('utm_campaign') && c.content === params.get('utm_content');
+      c.campaign === params.get('utm_campaign') &&
+      [c.content].concat(c.content_variants || []).indexOf(params.get('utm_content')) !== -1;
   }) || direct;
+  var content = [channel.content].concat(channel.content_variants || []).find(function (value) {
+    return value === params.get('utm_content');
+  }) || channel.content;
   var preferenceKey = 'leafling_analytics_preference_v1';
   var preference = null, session = null, pageSent = false;
   try { preference = localStorage.getItem(preferenceKey); } catch (_) { /* Memory-only choice still works. */ }
@@ -46,7 +50,7 @@
     if (!session) session = 'web_' + crypto.randomUUID();
     var properties = {
       distinct_id: session, session_id: session, platform: 'web', flow: 'website', schema_version: 1,
-      channel: channel.id, campaign: channel.campaign, content: channel.content,
+      channel: channel.id, campaign: channel.campaign, content: content,
       page_path: location.pathname, cta_location: cta, is_internal: internal,
       $process_person_profile: false, $geoip_disable: true, $ip: null
     };

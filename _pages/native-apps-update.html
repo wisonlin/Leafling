@@ -38,6 +38,19 @@ description: How Leafling combines chat, personal apps, and supported native iPh
     <p>The video below shows the official Photo Wall example reading six test illustrations through limited Photos access, saving the example, and opening it from Apps. It is a real, continuous Simulator recording from Leafling 1.5.4 (7), a test build. Photos permission was prepared before recording.</p>
     <p>This demonstrates the official example’s connection to Photos, saving, and first opening. It does not show ChatGPT creating the app, a Reminders write, or use on a later day.</p>
     <figure class="proof-video update-video"><video controls playsinline preload="none" poster="{{ '/assets/native-relaunch/photo-wall-result.png' | relative_url }}" aria-label="Real Simulator recording of Photo Wall using limited Photos access"><source src="{{ '/assets/native-relaunch/photo-wall-demo.mp4' | relative_url }}" type="video/mp4"><track kind="captions" src="{{ '/assets/native-relaunch/photo-wall-demo.vtt' | relative_url }}" srclang="en" label="English" default></video><figcaption>20.2 seconds · Official example · Six test illustrations · Test build</figcaption></figure>
+    <section id="try-photo-wall" aria-labelledby="photo-wall-help-title">
+      <h2 id="photo-wall-help-title">Try Photo Wall in three steps</h2>
+      <p>No ChatGPT connection is needed to preview or save this official example.</p>
+      <ol class="self-help-steps">
+        <li><h3>Open the official example.</h3><p>Open Discover, find Photo Wall, and tap Preview. On the welcome screen, Try Examples Free takes you to Discover.</p></li>
+        <li><h3>Choose what it can read.</h3><p>If iOS asks, choose your Photos access. The example loads recent items automatically; tap Load Recent Week to retry. It looks at the past seven days. If it cannot read recent photos, it may show sample content—check the message above the grid.</p></li>
+        <li><h3>Save your copy and open it.</h3><p>Tap Use This, then go back and open Apps → Photo Wall. Saving opens a linked chat with a prefilled message; you do not need to send it.</p></li>
+      </ol>
+      <p>The free plan holds up to 3 apps you create or import. Trying examples uses no slot; saving with Use This does.</p>
+      <h3>Create or edit with your existing ChatGPT account</h3>
+      <p>Connect in Settings → Connect ChatGPT. To create your own app, start a new chat in Chats and ask Leafling to create an app. Describe what it should do. When an app is saved, tap its app card or Open App. To edit it, open its chat in Chats and ask for a change, then open the updated app.</p>
+      <p>AI requests need internet and use your account’s available access and limits.</p>
+    </section>
     <h2>A personal workflow to explore</h2>
     <p>A voice checklist illustrates the kind of connection we want to make easy: speak, review the transcript, choose tasks, and confirm which ones to add to Reminders. Later, return to chat to separate work and personal categories inside your own app.</p>
     <figure class="update-concept"><figcaption class="concept-label"><strong>Design concept, not a live recording.</strong> This end-to-end workflow has not yet been tested; the system result is illustrative.</figcaption><img src="{{ '/assets/native-relaunch/native-workflow-panels-v2.png' | relative_url }}" alt="Design concept: describe a Voice List app in chat, review selected tasks, and confirm adding them to Reminders. The pictured system result is illustrative."></figure>
@@ -48,5 +61,6 @@ description: How Leafling combines chat, personal apps, and supported native iPh
   </div>
 </main>
 <footer class="shell"><span>Leafling · Apps you make your own</span><nav aria-label="Help"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/support/' | relative_url }}">Support</a><a href="{{ '/privacypolicy/' | relative_url }}">Privacy</a></nav></footer>
+{% include web-analytics.html %}
 </body>
 </html>
