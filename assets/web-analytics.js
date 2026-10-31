@@ -18,11 +18,12 @@
   if (!direct || !/^phc_[A-Za-z0-9]+$/.test(settings.public_project_token || '') ||
       !/^https:\/\/(us|eu)\.i\.posthog\.com$/.test(settings.host || '')) return;
   // Accept complete registry tuples only; never transmit unknown/raw UTM or referrer values.
-  var channel = channels.find(function (c) {
+  var sourceChannel = channels.find(function (c) {
     return c.id === params.get('utm_source') && c.medium === params.get('utm_medium') &&
       c.campaign === params.get('utm_campaign') &&
       [c.content].concat(c.content_variants || []).indexOf(params.get('utm_content')) !== -1;
-  }) || direct;
+  });
+  var channel = sourceChannel || direct;
   var content = [channel.content].concat(channel.content_variants || []).find(function (value) {
     return value === params.get('utm_content');
   }) || channel.content;
@@ -34,6 +35,7 @@
     catch (_) { return false; }
   });
   var originalLinks = links.map(function (a) { return a.href; });
+  var navigationLinks = [], originalNavigationLinks = [];
   function allowed() { return !blocked && preference === 'allow'; }
   function updateLinks() {
     links.forEach(function (a, i) {
@@ -43,6 +45,21 @@
         u.hostname === 'apps.apple.com' && u.searchParams.get('pt') === registry.apple_provider_token &&
         u.searchParams.get('ct') === channel.apple_campaign_token;
       a.href = allowed() && !internal && verified ? u.href : originalLinks[i];
+    });
+    navigationLinks.forEach(function (a, i) {
+      var u = new URL(originalNavigationLinks[i]);
+      // Carry only approved labels after consent, without storing a visitor or source ID.
+      var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+      if (allowed() && sourceChannel && !internal && !keys.some(function (key) { return u.searchParams.has(key); })) {
+        [sourceChannel.id, sourceChannel.medium, sourceChannel.campaign, content].forEach(function (value, j) {
+          u.searchParams.set(keys[j], value);
+        });
+      }
+      // QA opt-out/internal links must not become external events on the next page.
+      if ((params.get('analytics') === 'off' || internal) && !u.searchParams.has('analytics')) {
+        u.searchParams.set('analytics', params.get('analytics'));
+      }
+      a.href = u.href;
     });
   }
   function capture(event, cta) {
@@ -101,5 +118,13 @@
     if (!panel.hidden) panel.scrollIntoView({ block: 'nearest' });
   };
   document.body.appendChild(manage);
+  navigationLinks = Array.prototype.slice.call(document.querySelectorAll('a[href]')).filter(function (a) {
+    try {
+      var u = new URL(a.href);
+      return u.origin === location.origin && u.pathname !== location.pathname &&
+        allowedPaths.indexOf(u.pathname) !== -1;
+    } catch (_) { return false; }
+  });
+  originalNavigationLinks = navigationLinks.map(function (a) { return a.href; });
   updateLinks(); pageview();
 }());

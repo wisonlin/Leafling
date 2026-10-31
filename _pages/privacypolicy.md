@@ -5,7 +5,7 @@ include_in_header: true
 ---
 
 **Last updated**  
-October 24, 2026
+November 1, 2026
 
 # Privacy Policy
 
@@ -64,6 +64,8 @@ With your permission, we send page-visit and App Store-link click events to Post
 We do not send full URLs, query strings, referrers, free-form tracking values, account details, or page content as analytics properties. Network requests necessarily reach PostHog with network information; we disable geographic enrichment and person-profile creation and do not use network information to match website visits to app installations.
 
 Approved App Store links may include Apple's provider and campaign labels after you allow analytics. Apple's aggregate campaign reports are separate from website counts and anonymous iOS usage events. We do not join them into individual journeys or infer which person installed or purchased the app. Earlier links without these labels cannot be attributed retroactively.
+
+After you allow analytics, links between this site's public pages retain only approved channel, campaign, and content labels so reading an example does not change the recorded source. These links contain no visitor identifier, and we do not save attribution labels in cookies, local storage, or session storage. Refusing or withdrawing restores the site's original links. Explicit analytics-off and internal-test link options remain in place when you move between public pages.
 
 ## Tracking and Advertising
 
