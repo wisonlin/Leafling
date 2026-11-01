@@ -23,15 +23,15 @@ Please include:
 
 ### Do I need an API key?
 
-No. To send AI messages or create and edit apps with AI, open Settings in Leafling and connect an existing ChatGPT account. You can browse examples, write drafts, and open saved local apps before signing in. AI features inside examples or saved apps also require a connected account.
+In Leafling 1.5.5 and later, choose either ChatGPT or OpenAI API key in Settings > AI Connection. Earlier versions use ChatGPT sign-in. With ChatGPT, connect your existing account. With OpenAI API key, enter your own key and a Model ID available to your API account, then tap Save API settings. You only need the connection you choose. Your chosen account’s access, usage limits, and billing apply; Leafling Pro does not provide AI usage or API credits. You can browse examples, write drafts, and open saved local apps before connecting AI.
 
-### Where is my ChatGPT sign-in stored?
+### Where are my AI connection credentials stored?
 
-ChatGPT OAuth tokens are stored in the iOS Keychain. Basic account details, such as account status and model preference, are stored locally on your device.
+ChatGPT OAuth tokens and your personal OpenAI API key are stored separately in the iOS Keychain. Basic connection/account details and model preferences stay locally on your device. Switching connection keeps the other credentials; removing the personal API key does not sign out of ChatGPT. Saving or switching settings does not send your draft or make a model request.
 
-### What is sent to ChatGPT?
+### What is sent to OpenAI?
 
-When you send an AI message, Leafling sends your message and relevant conversation context to ChatGPT. App creation or editing may also send relevant project files. If you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent. Unsent drafts remain local.
+When you send an AI message, Leafling sends your message and relevant conversation context to OpenAI through the selected ChatGPT or API-key connection. App creation or editing may also send relevant project files. If you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent. Unsent drafts remain local.
 
 ### Where are generated projects stored?
 

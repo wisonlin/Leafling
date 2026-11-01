@@ -13,15 +13,15 @@ Leafling helps you create, run, and improve personal apps through chat on your i
 
 ## Information You Provide
 
-Leafling may store your conversations, drafts, prompts, generated app files, version history, ChatGPT account status, and model preferences locally on your device.
+Leafling may store your conversations, drafts, prompts, generated app files, version history, AI connection status, and model preferences locally on your device.
 
-ChatGPT OAuth tokens are stored in the iOS Keychain. Basic account metadata and model preferences are stored locally on your device.
+ChatGPT OAuth tokens and user-provided OpenAI API keys are stored in the iOS Keychain on your device. Basic connection/account metadata and model preferences are stored locally. A saved API key is not filled back into its input field.
 
 ## AI Requests
 
-When you send an AI message, Leafling sends your message and relevant conversation context to ChatGPT to produce a reply. If you ask it to create or edit an app, relevant project files may also be sent. When you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent to ChatGPT. Unsent drafts are stored locally and are not sent as AI requests.
+When you send an AI message, Leafling sends your message and relevant conversation context to OpenAI through the connection you selected: your ChatGPT account or your own OpenAI API key. If you ask it to create or edit an app, relevant project files may also be sent. When you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent to OpenAI through that connection. Unsent drafts are stored locally and are not sent as AI requests.
 
-Leafling does not require you to paste an API key, base URL, or provider configuration in the current version. ChatGPT sign-in is managed through a secure web sign-in flow.
+In Leafling 1.5.5 and later, you can choose ChatGPT sign-in or provide your own OpenAI API key and Model ID in Settings. Earlier versions use ChatGPT sign-in. ChatGPT sign-in uses the existing secure web sign-in flow. A personal API key is used only by the native app for authenticated requests to the official OpenAI API; it is not exposed to generated app pages. Saving, switching, or removing connection settings does not send an AI request. Your chosen account’s access, usage limits, and billing apply.
 
 ## Local Project Storage
 
@@ -53,7 +53,7 @@ Leafling does not use Motion & Fitness data for advertising, analytics, tracking
 
 Leafling may send limited usage analytics to PostHog Cloud to help us understand whether core flows are working. These events can include app launch, foreground, tab selection, onboarding, example preview, Use This, project creation, chat submission status, agent run result, app open, app share, `.leafling` import result, key Bridge API outcome, ChatGPT sign-in outcome, model tier selection, paywall, and purchase or restore results.
 
-Usage analytics use an anonymous install identifier and basic technical context such as app version, build number, device model, OS version, locale, and time zone. Leafling does not send prompts, project names, generated app files, ChatGPT emails, OAuth tokens, Bridge parameters, photos, contacts, calendar data, location, or other permission payloads in usage analytics.
+Usage analytics use an anonymous install identifier and basic technical context such as app version, build number, device model, OS version, locale, and time zone. Leafling does not send prompts, project names, generated app files, ChatGPT emails, OAuth tokens, OpenAI API keys, Bridge parameters, photos, contacts, calendar data, location, or other permission payloads in usage analytics.
 
 ## Website Analytics
 
