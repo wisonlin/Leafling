@@ -6,6 +6,20 @@ include_in_header: true
 
 # What's New
 
+## November 2, 2026 — Version 1.5.5 (US)
+
+Your routine, your own app. Build and refine it through chat, then run it inside Leafling on your iPhone. Use ChatGPT or your OpenAI API key; AI needs internet. Try an official example:
+<https://wisonlin.github.io/Leafling/updates/native-personal-apps/>
+
+<video controls playsinline preload="metadata" style="width:100%;max-width:22rem;height:auto">
+  <source src="{{ '/assets/native-relaunch/photo-wall-save-open-12s.mp4' | relative_url }}" type="video/mp4">
+  <track kind="captions" src="{{ '/assets/native-relaunch/photo-wall-save-open-12s.en.vtt' | relative_url }}" srclang="en" label="English" onload="for (const cue of this.track.cues || []) cue.line = 0">
+</video>
+
+Official Photo Wall example: save a copy and open it from Apps. Simulator test build 1.5.4 (7), sample photos. The linked chat stays unsent; no AI creation or editing is shown.
+
+Photos access was prepared before recording; no permission prompt is shown.
+
 ## Version 1.4
 
 Leafling has a cleaner workspace for building and using your tiny apps.
