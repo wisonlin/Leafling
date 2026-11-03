@@ -4,3 +4,10 @@
 
 /* Keep the analytics control reachable without covering the phone demo. */
 body .analytics-manage{position:static;display:block;min-height:44px;margin:16px auto 24px;box-shadow:none}
+
+/* Navigation and download touch targets stay inside narrow viewports. */
+.site-header > a{display:inline-flex;align-items:center;min-height:44px}
+.site-header .wordmark{flex-shrink:0}
+.primary-cta{max-width:100%;white-space:normal}
+.primary-cta > span{flex-shrink:0}
+@media(max-width:700px){.site-header{height:auto;min-height:61px;gap:12px}.site-header .review-label{min-width:0;font-size:14px;line-height:1.25;text-align:right}}
