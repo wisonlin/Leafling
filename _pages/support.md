@@ -8,7 +8,9 @@ include_in_header: true
 
 Need help with Leafling? Use this page to find setup notes and contact support.
 
-New to Leafling? Follow the [first app guide]({{ "/updates/native-personal-apps/" | relative_url }}) to connect AI, create a tool, open the saved result, and keep improving it.
+New to Leafling? Learn how to connect AI, create a tool, open the saved result, and keep improving it.
+
+<a href="{{ "/updates/native-personal-apps/" | relative_url }}" target="_self" style="display:inline-flex;align-items:center;min-height:44px">Open the first app guide</a>
 
 ## Contact
 
