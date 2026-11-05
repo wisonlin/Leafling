@@ -8,6 +8,8 @@ include_in_header: true
 
 Need help with Leafling? Use this page to find setup notes and contact support.
 
+New to Leafling? Follow the [first app guide]({{ "/updates/native-personal-apps/" | relative_url }}) to connect AI, create a tool, open the saved result, and keep improving it.
+
 ## Contact
 
 Email: limwihing@gmail.com

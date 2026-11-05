@@ -1,8 +1,8 @@
 ---
 layout: null
 permalink: /updates/native-personal-apps/
-title: Personal apps, connected to your iPhone
-description: How Leafling combines chat, personal apps, and supported native iPhone capabilities, with a real Photos example and a clearly labeled design concept.
+title: Create and use your first Leafling app
+description: Connect AI, describe a personal app, check the saved result, use it, and improve it. Includes copyable requests and a real official Photo Wall example with its recording source.
 ---
 <!doctype html>
 <html lang="en">
@@ -28,13 +28,30 @@ description: How Leafling combines chat, personal apps, and supported native iPh
 <body>
 <header class="site-header shell"><a class="wordmark" href="{{ '/' | relative_url }}">Leafling</a><a class="review-label" href="{{ '/support/' | relative_url }}">Support</a></header>
 <main class="update-article shell">
-  <header class="update-intro"><p class="eyebrow">Product update · October 24, 2026</p><h1>Personal apps,<br><em>connected to your iPhone.</em></h1><p class="lede">An idea in chat can become a tool you use on your phone—and keep changing when your needs change.</p></header>
+  <header class="update-intro"><p class="eyebrow">First app guide · Updated November 5, 2026</p><h1>Create your first app.<br><em>Then make it yours.</em></h1><p class="lede">Connect AI, describe one useful tool, open the saved result, and keep improving it in chat.</p><p class="guide-version">Steps refer to Leafling 1.5.5. New to Leafling? <a href="#try-photo-wall">Try the official Photo Wall example first</a>, without connecting AI.</p><nav class="guide-jumps" aria-label="In this guide"><a href="#first-app">Create an app</a><a href="#try-photo-wall">Try Photo Wall</a><a href="#recorded-example">Watch the example</a></nav></header>
   <div class="update-prose">
     <p>Leafling is for personal apps: the photo view, checklist, or small utility you want to shape around your own routine. Describe what you want in chat, open the result inside Leafling, then return to chat to change it. You do not need to write the code yourself.</p>
+    <section id="first-app" aria-labelledby="first-app-title">
+      <h2 id="first-app-title">From a request to a tool you can use</h2>
+      <ol class="first-use-steps">
+        <li><h3>Connect the AI you want to use.</h3><p>Open <strong>Settings → AI Connection</strong>. Choose <strong>ChatGPT</strong> and tap <strong>Connect ChatGPT</strong> to connect your existing account. Or choose <strong>OpenAI API key</strong>, enter your own key and a <strong>Model ID</strong> available to your API account, then tap <strong>Save API settings</strong>. You only need one connection.</p><p>AI requests need internet. Your chosen account’s access, usage limits, and billing apply. Leafling Pro provides more saved-app space; it does not provide model usage or API credits. See <a href="https://learn.chatgpt.com/docs/sign-in-with-chatgpt">OpenAI’s ChatGPT connection guidance</a> and <a href="https://developers.openai.com/api/docs/pricing">API pricing</a> for current account terms.</p></li>
+        <li><h3>Ask for one specific app.</h3><p>Start a new chat in <strong>Chats</strong>. Say that you want an app, what you will use it for, and what its buttons should do. For a photo tool, you could paste the request below.</p>
+          <div class="prompt-card"><label for="create-request">Suggested creation request</label><textarea id="create-request" rows="8" readonly spellcheck="false">Create an app to pick my favorite photos from the past seven days. Wait until I tap Load Photos to ask for access, and show only photos I allow. Let me open a larger photo and star my picks inside the app, without changing Apple Photos favorites. Keep my picks when I reopen it. Show a clear message if there are no photos or access is denied.</textarea><button type="button" data-copy-prompt="create-request" aria-describedby="create-request-status" hidden>Copy creation request</button><p id="create-request-status" class="copy-status" role="status" aria-live="polite">You can select and copy the text above.</p></div>
+          <p class="guide-note">This is a suggested request, not a recorded AI result. The official Photo Wall recording below demonstrates a saved example, not this prompt being generated. Check what your generated app actually does before relying on it.</p>
+        </li>
+        <li><h3>Open the saved result and check it.</h3><p>Wait for the run to finish and look for the app card marked <strong>Saved to your Apps</strong>. Tap the card or <strong>Open App</strong> to open its own preview screen. A text reply alone is not a saved app.</p><p>If the run reports an error or no saved card appears, check the message and your connection before trying again. Do not treat a progress step as a finished result.</p></li>
+        <li><h3>Use it, then reopen it from Apps.</h3><p>For the photo request, tap <strong>Load Photos</strong> in the generated app and review any iOS permission request. Allow only the access you want. Check that photos load, or that the app explains why they cannot. Star a photo, return to <strong>Apps</strong>, reopen your saved app, and check whether the pick remains.</p><p>These are checks to perform on your result, not a guarantee that AI will implement every detail correctly. Generated apps run inside Leafling; they are not separate App Store downloads.</p></li>
+        <li><h3>Improve the same app in chat.</h3><p>Return to that app’s conversation in <strong>Chats</strong> and ask for a focused change. Keep using the same app instead of starting a second copy. For example:</p>
+          <div class="prompt-card"><label for="edit-request">Suggested follow-up request</label><textarea id="edit-request" rows="4" readonly spellcheck="false">Add an Only Favorites button that filters the grid, and an All Photos button to show everything loaded again. Keep my existing picks in this same app.</textarea><button type="button" data-copy-prompt="edit-request" aria-describedby="edit-request-status" hidden>Copy follow-up request</button><p id="edit-request-status" class="copy-status" role="status" aria-live="polite">You can select and copy the text above.</p></div>
+          <p>When the updated app is saved, open it again. Check the new buttons and your earlier picks. If something is wrong, describe what happened and what you expected in the same chat.</p>
+        </li>
+      </ol>
+      <p>The free plan holds up to <strong>3 apps you create or import</strong>. Editing the same app uses the same saved-app slot. You can <a href="#try-photo-wall">try the official example below</a> before sending any AI request. Need setup help? Visit <a href="{{ '/support/' | relative_url }}">Support</a>.</p>
+    </section>
     <h2>The connection to your phone</h2>
     <p>The apps you create use web interfaces inside Leafling. Supported actions connect through Leafling’s JSON Bridge to native iOS SDKs. That connection lets a personal interface work with phone data and system actions, subject to the device and the access you allow.</p>
     <p>For example, a photo app can read the Photos library within your permitted scope. A checklist can ask to add an item to Reminders after your confirmation. The interface is yours to shape; iOS still controls sensitive access.</p>
-    <h2>What we have recorded</h2>
+    <h2 id="recorded-example">What we have recorded</h2>
     <p>The video below shows the official Photo Wall example reading six test illustrations through limited Photos access, saving the example, and opening it from Apps. It is a real, continuous Simulator recording from Leafling 1.5.4 (7), a test build. Photos permission was prepared before recording.</p>
     <p>This demonstrates the official example’s connection to Photos, saving, and first opening. It does not show ChatGPT creating the app, a Reminders write, or use on a later day.</p>
     <figure class="proof-video update-video"><video controls playsinline preload="none" poster="{{ '/assets/native-relaunch/photo-wall-result.png' | relative_url }}" aria-label="Real Simulator recording of Photo Wall using limited Photos access"><source src="{{ '/assets/native-relaunch/photo-wall-demo.mp4' | relative_url }}" type="video/mp4"><track kind="captions" src="{{ '/assets/native-relaunch/photo-wall-demo.vtt' | relative_url }}" srclang="en" label="English" default></video><figcaption>20.2 seconds · Official example · Six test illustrations · Test build</figcaption></figure>
@@ -47,20 +64,19 @@ description: How Leafling combines chat, personal apps, and supported native iPh
         <li><h3>Save your copy and open it.</h3><p>Tap Use This, then go back and open Apps → Photo Wall. Saving opens a linked chat with a prefilled message; you do not need to send it.</p></li>
       </ol>
       <p>The free plan holds up to 3 apps you create or import. Trying examples uses no slot; saving with Use This does.</p>
-      <h3>Create or edit with your existing ChatGPT account</h3>
-      <p>Connect in Settings → Connect ChatGPT. To create your own app, start a new chat in Chats and ask Leafling to create an app. Describe what it should do. When an app is saved, tap its app card or Open App. To edit it, open its chat in Chats and ask for a change, then open the updated app.</p>
-      <p>AI requests need internet and use your account’s available access and limits.</p>
+      <p>Want to make your own version? <a href="#first-app">Follow the creation and editing steps above</a>. The example’s prefilled chat stays unsent until you choose to send it.</p>
     </section>
     <h2>A personal workflow to explore</h2>
     <p>A voice checklist illustrates the kind of connection we want to make easy: speak, review the transcript, choose tasks, and confirm which ones to add to Reminders. Later, return to chat to separate work and personal categories inside your own app.</p>
     <figure class="update-concept"><figcaption class="concept-label"><strong>Design concept, not a live recording.</strong> This end-to-end workflow has not yet been tested; the system result is illustrative.</figcaption><img src="{{ '/assets/native-relaunch/native-workflow-panels-v2.png' | relative_url }}" alt="Design concept: describe a Voice List app in chat, review selected tasks, and confirm adding them to Reminders. The pictured system result is illustrative."></figure>
     <h2>Keep changing the same app</h2>
     <p>A personal tool does not have to be finished in one request. You can ask for a different layout, another category, or an extra supported action, then keep using the app inside Leafling. The point is a tool that fits you and can change with you.</p>
-    <p>Leafling is free to download. You can try official examples before signing in. AI chat, creation, editing, and AI features in personal apps require internet and an existing ChatGPT account; its access and usage limits apply. Generated apps run inside Leafling.</p>
+    <p>Leafling is free to download. You can try official examples before signing in. AI chat, creation, editing, and AI features in personal apps require internet and your chosen ChatGPT or OpenAI API connection; its access, usage limits, and billing apply. Generated apps run inside Leafling.</p>
     <a class="primary-cta appStoreLink" target="_blank" href="https://apps.apple.com/us/app/leafling/id6762119069" rel="noopener">Get Leafling on the App Store <span aria-hidden="true">↗</span></a>
   </div>
 </main>
 <footer class="shell"><span>Leafling · Apps you make your own</span><nav aria-label="Help"><a href="{{ '/' | relative_url }}">Home</a><a href="{{ '/support/' | relative_url }}">Support</a><a href="{{ '/privacypolicy/' | relative_url }}">Privacy</a></nav></footer>
+<script src="{{ '/assets/native-relaunch/first-use.js' | relative_url }}" defer></script>
 {% include web-analytics.html %}
 </body>
 </html>
