@@ -82,6 +82,14 @@ ChatGPT OAuth tokens and your personal OpenAI API key are stored separately in t
 
 When you send an AI message, Leafling sends your message and relevant conversation context to OpenAI through the selected ChatGPT or API-key connection. App creation or editing may also send relevant project files. If you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent. Unsent drafts remain local.
 
+<h3 id="reviewed-data-help">What happens to reviewed data in internal test builds?</h3>
+
+This applies to the shared-data internal test candidate 1.5.6 (4), not general App Store availability. You review and approve rows, fields, or edited text before they return to the requesting chat or app. Approved results may then be used by that app or sent through your current AI connection. These actions process original media locally rather than automatically attaching it to AI results; they are not a promise that the whole workflow is offline.
+
+Data and references may be cached locally. Reference expiry is not instant erasure of chat history or save-prevention receipts. Leaving an app page or deleting a chat does not undo a Photos or Reminders save you already confirmed. Review what you share, and confirm system writes separately.
+
+<a href="{{ "/privacypolicy/" | relative_url }}#reviewed-task-data" target="_self" style="display:inline-flex;align-items:center;min-height:44px">Reviewed-data privacy</a>
+
 ### Where are generated projects stored?
 
 Your conversations, drafts, saved apps, and version history are stored locally on your device. Leafling does not publish them to a public app marketplace.

@@ -5,7 +5,7 @@ include_in_header: true
 ---
 
 **Last updated**  
-November 1, 2026
+November 7, 2026
 
 # Privacy Policy
 
@@ -22,6 +22,18 @@ ChatGPT OAuth tokens and user-provided OpenAI API keys are stored in the iOS Key
 When you send an AI message, Leafling sends your message and relevant conversation context to OpenAI through the connection you selected: your ChatGPT account or your own OpenAI API key. If you ask it to create or edit an app, relevant project files may also be sent. When you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent to OpenAI through that connection. Unsent drafts are stored locally and are not sent as AI requests.
 
 In Leafling 1.5.5 and later, you can choose ChatGPT sign-in or provide your own OpenAI API key and Model ID in Settings. Earlier versions use ChatGPT sign-in. ChatGPT sign-in uses the existing secure web sign-in flow. A personal API key is used only by the native app for authenticated requests to the official OpenAI API; it is not exposed to generated app pages. Saving, switching, or removing connection settings does not send an AI request. Your chosen account’s access, usage limits, and billing apply.
+
+<h2 id="reviewed-task-data">Reviewed task data in internal test builds</h2>
+
+This section describes the shared-data internal test candidate 1.5.6 (4). It does not mean these actions are available in the public App Store version.
+
+Where these actions are enabled, you review the records and fields, or edit the text, before approving what is returned to the requesting chat or personal app. Original media is handled locally by these actions and is not automatically attached to their AI results. The text, selected fields, and structured results you approve may be included in further requests through your current AI connection, or used by the requesting app. Local processing therefore does not make the whole workflow offline. Saving a video copy to Photos or creating a reminder still requires your confirmation.
+
+Approved results, selected local media copies or references, and operation receipts can be stored on your device. Access is scoped to the relevant chat or app page. Completed chat results can survive later turns and an app restart while their references remain valid. A reference expiring makes it unusable; it does not instantly erase chat history, saved step results, or separate records kept to prevent repeated saves. Cleanup is checked during use or scope removal; it is not guaranteed to run in the background at an exact expiry time.
+
+Leaving an app page revokes that page’s shared-data references. Deleting a chat revokes its shared-data access and requests removal of its chat-scoped caches and checkpoints. These actions do not undo a save you already confirmed, or guarantee deletion of separate write receipts, saved-app copies, or content already sent to AI. A save already underway may still finish after you leave; later shared-data steps for that ended scope are stopped.
+
+<a href="{{ "/support/" | relative_url }}#reviewed-data-help" target="_self" style="display:inline-flex;align-items:center;min-height:44px">Reviewed-data support</a>
 
 ## Local Project Storage
 
