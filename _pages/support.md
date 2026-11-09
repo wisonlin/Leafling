@@ -12,6 +12,22 @@ New to Leafling? Learn how to connect AI, create a tool, open the saved result, 
 
 <a href="{{ "/updates/native-personal-apps/" | relative_url }}" target="_self" style="display:inline-flex;align-items:center;min-height:44px">Open the first app guide</a>
 
+<h2 id="getting-started">Getting started</h2>
+
+<h3 id="make-a-first-app">How do I turn an idea into an app?</h3>
+
+Try the official photo tool in **Discover → Photo Wall → Preview** before connecting AI. To create your own, set up **Settings → AI Connection**, start a new chat in **Chats** and ask for an app—for example, “Make a photo wall app.” When a saved app result appears, tap **Open App**.
+
+<h3 id="open-my-app-again"><span id="where-are-generated-projects-stored"></span>Where do I open my app again?</h3>
+
+Open **Apps** in Leafling and tap your saved app. It runs inside Leafling on your iPhone or iPad; no separate app package is needed. Conversations, drafts, app files and version history stay locally on your device. Leafling does not publish them to an app marketplace. AI and online features still need a connection.
+
+<h3 id="phone-permissions"><span id="why-do-examples-ask-for-permissions"></span>When does an app need phone permissions?</h3>
+
+When you use a feature that needs protected data, iOS controls the permission request. Allow only the access you want; limited Photos access stays limited. Declining Photos access prevents that feature from reading protected photos. Photo Wall may show sample content instead—check its message. Only supported features and allowed access are available.
+
+<nav aria-label="Getting started next steps" style="display:flex;flex-wrap:wrap;gap:4px 18px"><a href="#ai-connection" target="_self" style="display:inline-flex;align-items:center;min-height:44px">AI setup and costs</a><a class="appStoreLink" href="https://apps.apple.com/us/app/leafling/id6762119069" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;min-height:44px">Get Leafling on the App Store</a></nav>
+
 <h2 id="ai-connection">AI connection and costs</h2>
 
 These steps describe the published Leafling 1.5.5 setup. AI chat, app creation, and AI editing need internet and a connection you choose. You can browse official examples, write drafts, and open saved local apps before connecting.
@@ -89,14 +105,6 @@ This applies to the shared-data internal test candidate 1.5.6 (4), not general A
 Data and references may be cached locally. Reference expiry is not instant erasure of chat history or save-prevention receipts. Leaving an app page or deleting a chat does not undo a Photos or Reminders save you already confirmed. Review what you share, and confirm system writes separately.
 
 <a href="{{ "/privacypolicy/" | relative_url }}#reviewed-task-data" target="_self" style="display:inline-flex;align-items:center;min-height:44px">Reviewed-data privacy</a>
-
-### Where are generated projects stored?
-
-Your conversations, drafts, saved apps, and version history are stored locally on your device. Leafling does not publish them to a public app marketplace.
-
-### Why do examples ask for permissions?
-
-Some examples show how a web app can connect to native iPhone capabilities. Permissions are requested only when you interact with a feature that needs them, and iOS controls the permission prompt.
 
 ### Why do examples ask for Motion & Fitness access?
 
