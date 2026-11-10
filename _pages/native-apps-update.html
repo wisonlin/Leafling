@@ -24,11 +24,25 @@ description: Connect AI, describe a personal app, check the saved result, use it
   <meta name="twitter:image" content="{{ '/assets/appicon.png' | absolute_url }}">
   <link rel="icon" href="{{ '/assets/appicon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/native-relaunch/positioning.css' | relative_url }}">
+  <style>
+    .photo-case { scroll-margin-top: 24px; }
+    .photo-case-screens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 32px 0 16px; align-items: start; }
+    .photo-case-screens figure { margin: 0; min-width: 0; }
+    .photo-case-screens img { display: block; width: 100%; height: auto; border: 1px solid #dddcd4; border-radius: 18px; }
+    .photo-case-screens figcaption { margin-top: 12px; color: #626b62; font-size: 15px; line-height: 1.55; }
+    .photo-case-screens figcaption strong { color: #1e3d31; }
+    .photo-case-actions { display: flex; align-items: center; gap: 12px 24px; flex-wrap: wrap; margin-top: 24px; }
+    .photo-case-actions > a { display: inline-flex; align-items: center; min-height: 48px; }
+    @media (max-width: 600px) {
+      .photo-case-screens { grid-template-columns: 1fr; gap: 28px; }
+      .photo-case-screens figure { width: min(100%, 250px); margin: 0 auto; }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header shell"><a class="wordmark" href="{{ '/' | relative_url }}">Leafling</a><a class="review-label" href="{{ '/support/' | relative_url }}">Support</a></header>
 <main class="update-article shell">
-  <header class="update-intro"><p class="eyebrow">First app guide · Updated November 5, 2026</p><h1>Create your first app.<br><em>Then make it yours.</em></h1><p class="lede">Connect AI, describe one useful tool, open the saved result, and keep improving it in chat.</p><p class="guide-version">Steps refer to Leafling 1.5.5. New to Leafling? <a href="#try-photo-wall">Try the official Photo Wall example first</a>, without connecting AI.</p><nav class="guide-jumps" aria-label="In this guide"><a href="#first-app">Create an app</a><a href="#try-photo-wall">Try Photo Wall</a><a href="#recorded-example">Watch the example</a></nav></header>
+  <header class="update-intro"><p class="eyebrow">First app guide · Updated November 10, 2026</p><h1>Create your first app.<br><em>Then make it yours.</em></h1><p class="lede">Connect AI, describe one useful tool, open the saved result, and keep improving it in chat.</p><p class="guide-version">Steps refer to Leafling 1.5.5. New to Leafling? <a href="#try-photo-wall">Try the official Photo Wall example first</a>, without connecting AI.</p><nav class="guide-jumps" aria-label="In this guide"><a href="#first-app">Create an app</a><a href="#try-photo-wall">Try Photo Wall</a><a href="#recorded-example">Watch the example</a></nav></header>
   <div class="update-prose">
     <p>Leafling is for personal apps: the photo view, checklist, or small utility you want to shape around your own routine. Describe what you want in chat, open the result inside Leafling, then return to chat to change it. You do not need to write the code yourself.</p>
     <section id="first-app" aria-labelledby="first-app-title">
@@ -55,16 +69,27 @@ description: Connect AI, describe a personal app, check the saved result, use it
     <p>The video below shows the official Photo Wall example reading six test illustrations through limited Photos access, saving the example, and opening it from Apps. It is a real, continuous Simulator recording from Leafling 1.5.4 (7), a test build. Photos permission was prepared before recording.</p>
     <p>This demonstrates the official example’s connection to Photos, saving, and first opening. It does not show ChatGPT creating the app, a Reminders write, or use on a later day.</p>
     <figure class="proof-video update-video"><video controls playsinline preload="none" poster="{{ '/assets/native-relaunch/photo-wall-result.png' | relative_url }}" aria-label="Real Simulator recording of Photo Wall using limited Photos access"><source src="{{ '/assets/native-relaunch/photo-wall-demo.mp4' | relative_url }}" type="video/mp4"><track kind="captions" src="{{ '/assets/native-relaunch/photo-wall-demo.vtt' | relative_url }}" srclang="en" label="English" default></video><figcaption>20.2 seconds · Official example · Six test illustrations · Test build</figcaption></figure>
-    <section id="try-photo-wall" aria-labelledby="photo-wall-help-title">
-      <h2 id="photo-wall-help-title">Try Photo Wall in three steps</h2>
-      <p>No ChatGPT connection is needed to preview or save this official example.</p>
+    <section id="try-photo-wall" class="photo-case" aria-labelledby="photo-wall-help-title">
+      <h2 id="photo-wall-help-title">Keep your recent week in a photo wall</h2>
+      <p>You want one place to look through this week’s photos, then open it again later. Start with the official Photo Wall example: preview it, check what it can read, and keep a copy in Apps. No AI connection is needed for these four steps.</p>
       <ol class="self-help-steps">
-        <li><h3>Open the official example.</h3><p>Open Discover, find Photo Wall, and tap Preview. On the welcome screen, Try Examples Free takes you to Discover.</p></li>
-        <li><h3>Choose what it can read.</h3><p>If iOS asks, choose your Photos access. The example loads recent items automatically; tap Load Recent Week to retry. It looks at the past seven days. If it cannot read recent photos, it may show sample content—check the message above the grid.</p></li>
-        <li><h3>Save your copy and open it.</h3><p>Tap Use This, then go back and open Apps → Photo Wall. Saving opens a linked chat with a prefilled message; you do not need to send it.</p></li>
+        <li><h3>Find Photo Wall in Discover.</h3><p>Open <strong>Discover → Photo Wall → Preview</strong>. On the welcome screen, <strong>Try Examples Free</strong> takes you to Discover. Open Preview to try the ready-made tool before saving it.</p></li>
+        <li><h3>Choose the photos it can read.</h3><p>If iOS asks for Photos access, allow only the access you want. Limited access stays within the photos you allow. The example looks for up to 18 recent photos or videos from the <strong>past seven days</strong> and loads automatically. Tap <strong>Load Recent Week</strong> to retry.</p></li>
+        <li><h3>Check whether the wall is yours or a sample.</h3><p>A successful read shows <strong>Loaded … recent assets</strong> above the grid. Check the pictures and that status together. If access is unavailable, or no recent items can be read, the tool may show sample content instead. A colorful grid alone does not mean your library loaded.</p><p>If you chose limited access, make sure the selected items include photos from the past seven days. You can keep the access limited; you do not have to grant your whole library to try the example.</p></li>
+        <li><h3>Save the tool, then reopen it.</h3><p>Tap <strong>Use This</strong>. Saving opens a linked chat with a prefilled message; you do not need to send it. Go back, open <strong>Apps → Photo Wall</strong>, and check that the tool opens again.</p><p>This saves the tool inside Leafling, not a new album in Apple Photos. When it opens, it can read the recent week again within your current access. It is not a permanent archive of the pictures shown today.</p></li>
       </ol>
-      <p>The free plan holds up to 3 apps you create or import. Trying examples uses no slot; saving with Use This does.</p>
-      <p>Want to make your own version? <a href="#first-app">Follow the creation and editing steps above</a>. The example’s prefilled chat stays unsent until you choose to send it.</p>
+      <div class="photo-case-screens" aria-label="Photo Wall example screens">
+        <figure><img src="{{ '/assets/native-relaunch/photo-wall-discover.png' | relative_url }}" width="1206" height="2622" loading="lazy" alt="Leafling Discover lists Photo Wall with Preview and Create actions."><figcaption><strong>1 · Find the example.</strong> Photo Wall is in Discover; choose Preview.</figcaption></figure>
+        <figure><img src="{{ '/assets/native-relaunch/photo-wall-store-example.png' | relative_url }}" width="1206" height="2622" loading="lazy" alt="Photo Wall example layout with colorful sample tiles and a Load Recent Week action."><figcaption><strong>2 · Recognize the result.</strong> This screen uses sample content. In your preview, check the status to know whether permitted photos loaded.</figcaption></figure>
+        <figure><img src="{{ '/assets/native-relaunch/photo-wall-saved-apps.png' | relative_url }}" width="1206" height="2622" loading="lazy" alt="The Apps tab shows a saved Photo Wall tool alongside other personal apps."><figcaption><strong>3 · Find your saved copy.</strong> Open Photo Wall from Apps. Your saved-app list will differ.</figcaption></figure>
+      </div>
+      <p class="guide-note">These example screens come from Leafling’s App Store screenshot set and use sample content. They are not a recording of an AI request or a person’s photo library. The separate video above shows its own source and test-build details.</p>
+      <p>Trying the example uses no saved-app slot. <strong>Use This</strong> saves a copy and counts toward the free plan’s <strong>3 created or imported apps</strong>.</p>
+      <h3>A request for your own version</h3>
+      <p>After trying the example, you can <a href="#first-app">connect AI and ask for your own app</a>. Start with one clear request, then check the result:</p>
+      <div class="prompt-card"><label for="photo-case-request">Suggested photo-wall request</label><textarea id="photo-case-request" rows="5" readonly spellcheck="false">Create a photo wall app for the past seven days. Show only photos I allow, with a Load Recent Week button. Keep the tool in Leafling so I can reopen it from Apps. Explain clearly when no recent photos can be read.</textarea><button type="button" data-copy-prompt="photo-case-request" aria-describedby="photo-case-request-status" hidden>Copy photo-wall request</button><p id="photo-case-request-status" class="copy-status" role="status" aria-live="polite">You can select and copy the text above.</p></div>
+      <p>This is a suggested request, not a recorded AI result. AI creation and changes need internet and your chosen <a href="{{ '/support/' | relative_url }}#ai-connection">ChatGPT or OpenAI API connection</a>; its access, usage limits, and billing apply. Check the generated app before relying on it.</p>
+      <nav class="photo-case-actions" aria-label="Photo Wall next steps"><a class="primary-cta appStoreLink" target="_blank" href="https://apps.apple.com/us/app/leafling/id6762119069" rel="noopener">Get Leafling on the App Store <span aria-hidden="true">↗</span></a><a href="#recorded-example">Watch the official example</a></nav>
     </section>
     <h2>A personal workflow to explore</h2>
     <p>A voice checklist illustrates the kind of connection we want to make easy: speak, review the transcript, choose tasks, and confirm which ones to add to Reminders. Later, return to chat to separate work and personal categories inside your own app.</p>
