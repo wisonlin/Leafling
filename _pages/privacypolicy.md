@@ -75,6 +75,18 @@ Leafling does not use Motion & Fitness data for advertising, analytics, tracking
 
 ## Usage Analytics
 
+<h3 id="app-analytics-156">App analytics in the App Store release of Leafling 1.5.6</h3>
+
+App usage analytics is off by default, including after an upgrade from a previous version. Leafling sends the limited analytics described below to PostHog Cloud only if you choose **Share Usage Analytics**. You can keep using Leafling if you leave analytics off.
+
+To change your choice, open **Settings → Help & Privacy → Usage Analytics** in Leafling. If you stop sharing, Leafling clears queued events, stops sending new events, and cancels any request still in progress. This does not delete data that already reached PostHog. If you share again later, only new activity is recorded. Leafling clears any unsent analytics left by an earlier version on upgrade.
+
+<h3 id="app-analytics-earlier">App analytics in earlier versions</h3>
+
+Versions through 1.5.5 can send the app usage analytics described below automatically when analytics is configured.
+
+<h3>What app analytics includes</h3>
+
 Leafling may send limited usage analytics to PostHog Cloud to help us understand whether core flows are working. These events can include app launch, foreground, tab selection, onboarding, example preview, Use This, project creation, chat submission status, agent run result, app open, app share, `.leafling` import result, key Bridge API outcome, ChatGPT sign-in outcome, model tier selection, paywall, and purchase or restore results.
 
 Usage analytics use an anonymous install identifier and basic technical context such as app version, build number, device model, OS version, locale, and time zone. Leafling does not send prompts, project names, generated app files, ChatGPT emails, OAuth tokens, OpenAI API keys, Bridge parameters, photos, contacts, calendar data, location, or other permission payloads in usage analytics.
