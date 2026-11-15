@@ -5,7 +5,7 @@ include_in_header: true
 ---
 
 **Last updated**  
-November 7, 2026
+November 15, 2026
 
 # Privacy Policy
 
@@ -22,6 +22,18 @@ ChatGPT OAuth tokens and user-provided OpenAI API keys are stored in the iOS Key
 When you send an AI message, Leafling sends your message and relevant conversation context to OpenAI through the connection you selected: your ChatGPT account or your own OpenAI API key. If you ask it to create or edit an app, relevant project files may also be sent. When you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent to OpenAI through that connection. Unsent drafts are stored locally and are not sent as AI requests.
 
 In Leafling 1.5.5 and later, you can choose ChatGPT sign-in or provide your own OpenAI API key and Model ID in Settings. Earlier versions use ChatGPT sign-in. ChatGPT sign-in uses the existing secure web sign-in flow. A personal API key is used only by the native app for authenticated requests to the official OpenAI API; it is not exposed to generated app pages. Saving, switching, or removing connection settings does not send an AI request. Your chosen account’s access, usage limits, and billing apply.
+
+<h2 id="photos-and-reminders-156">Photos and Reminders in Leafling 1.5.6</h2>
+
+This section describes the updated permissions in Leafling 1.5.6. It applies when you use that version. If you use Leafling 1.5.5, see the other applicable sections of this policy for its permissions.
+
+When you use local Photos search or text recognition in a chat, Leafling asks for its own Photos consent in addition to the access you allow in iOS. With both in place, requests can search or process photos and videos within that access. Applicable requests can use that consent again while it remains enabled. If you previously allowed an older version of this Photos consent, Leafling asks for the updated consent before using it for these requests.
+
+If your task uses AI, relevant results such as a photo’s dimensions, capture date, or text recognized on your device may be included in a request sent to OpenAI through the connection you selected. These local photo search and text-recognition tools do not attach original photos, videos, or previews to those AI requests. Choosing to attach a photo yourself is a separate action.
+
+You can revoke Leafling’s Photos consent in Leafling Settings and change its Photos access in iOS Settings. Revoking access stops later requests from using that permission. It does not recall information previously sent to an AI service or remove copies you already saved.
+
+If you grant Reminders access, Leafling can read reminders you request in a chat or a saved app. Creating a reminder, marking it complete, or changing its due time requires your confirmation of the specific action.
 
 <h2 id="reviewed-task-data">Reviewed task data in internal test builds</h2>
 
