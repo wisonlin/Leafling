@@ -8,7 +8,7 @@ include_in_header: true
 
 Need help with Leafling? Use this page to find setup notes and contact support.
 
-New to Leafling? Learn how to connect AI, create a tool, open the saved result, and keep improving it.
+New to Leafling? Try an example, then learn how to create and reopen your own tool.
 
 <a href="{{ "/updates/native-personal-apps/" | relative_url }}" target="_self" style="display:inline-flex;align-items:center;min-height:44px">Open the first app guide</a>
 
@@ -16,11 +16,13 @@ New to Leafling? Learn how to connect AI, create a tool, open the saved result, 
 
 <h3 id="make-a-first-app">How do I turn an idea into an app?</h3>
 
-Try the official photo tool in **Discover → Photo Wall → Preview** before connecting AI. To create your own, set up **Settings → AI Connection**, start a new chat in **Chats** and ask for an app—for example, “Make a photo wall app.” When a saved app result appears, tap **Open App**.
+Try the official photo tool in **Discover → Photo Wall → Preview** before connecting AI. The 1.5.6 preview opens with sample photos. Select **Load My Recent Photos** when you want to load your permitted library. To create your own tool, set up **Settings → AI Connection**, start a new chat in **Chats**, and ask for an app. When a saved result appears, tap **Open App**.
+
+<a href="{{ '/updates/native-personal-apps/' | relative_url }}#try-photo-wall" target="_self">Read the Photo Wall walkthrough</a>.
 
 <h3 id="open-my-app-again"><span id="where-are-generated-projects-stored"></span>Where do I open my app again?</h3>
 
-Open **Apps** in Leafling and tap your saved app. It runs inside Leafling on your iPhone or iPad; no separate app package is needed. Conversations, drafts, app files and version history stay locally on your device. Leafling does not publish them to an app marketplace. AI and online features still need a connection.
+Open **Apps** in Leafling and tap your saved app. In 1.5.6, tools use the same icon on their chat card and in Apps. Your tool runs inside Leafling on your iPhone or iPad; no separate app package is needed. Conversations, drafts, app files and version history stay locally on your device. Leafling does not publish them to an app marketplace. AI and online features still need a connection.
 
 <h3 id="phone-permissions"><span id="why-do-examples-ask-for-permissions"></span>When does an app need phone permissions?</h3>
 
@@ -30,7 +32,7 @@ When you use a feature that needs protected data, iOS controls the permission re
 
 <h2 id="ai-connection">AI connection and costs</h2>
 
-These steps describe the published Leafling 1.5.5 setup. AI chat, app creation, and AI editing need internet and a connection you choose. You can browse official examples, write drafts, and open saved local apps before connecting.
+These steps apply to Leafling 1.5.5 and 1.5.6 where both connection options are shown in Settings. AI chat, app creation, and AI editing need internet and a connection you choose. You can browse official examples, write drafts, and open saved local apps before connecting.
 
 <nav aria-label="AI help topics" style="display:flex;flex-wrap:wrap;gap:4px 18px"><a href="#chatgpt-setup" target="_self" style="display:inline-flex;align-items:center;min-height:44px">ChatGPT</a><a href="#api-key-setup" target="_self" style="display:inline-flex;align-items:center;min-height:44px">API key</a><a href="#ai-costs" target="_self" style="display:inline-flex;align-items:center;min-height:44px">Costs</a><a href="#connection-troubleshooting" target="_self" style="display:inline-flex;align-items:center;min-height:44px">Troubleshooting</a></nav>
 
@@ -97,6 +99,10 @@ ChatGPT OAuth tokens and your personal OpenAI API key are stored separately in t
 ### What is sent to OpenAI?
 
 When you send an AI message, Leafling sends your message and relevant conversation context to OpenAI through the selected ChatGPT or API-key connection. App creation or editing may also send relevant project files. If you explicitly use an AI feature inside an example or saved app, the content you choose to process may be sent. Unsent drafts remain local.
+
+<h3 id="photos-permissions-156">How does photo search work in version 1.5.6?</h3>
+
+Photo Wall can preview samples on its own. When you choose to load your photos, iOS controls what the tool can see. When a chat uses the separate Photos search or text recognition permission in Leafling, relevant fields or recognized text may be sent to OpenAI as part of your task. You can change access in Settings. See <a href="{{ '/privacypolicy/' | relative_url }}#photos-and-reminders-156" target="_self">Photos and Reminders permissions</a> for details.
 
 <h3 id="reviewed-data-help">What happens to reviewed data in internal test builds?</h3>
 

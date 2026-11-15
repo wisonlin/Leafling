@@ -1,0 +1,59 @@
+.cobalt-site {
+  --paper: #fdfdfd;
+  --ink: #16181d;
+  --muted: #505966;
+  --line: #dbe1ec;
+  --blue: #2443aa;
+  --wash: #edf2ff;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font: 16px/1.54 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.cobalt-site * { box-sizing: border-box; }
+.cobalt-site .page-wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.cobalt-site a { color: var(--blue); text-underline-offset: 4px; }
+.cobalt-site a:focus-visible { outline: 3px solid #5672e0; outline-offset: 5px; }
+.cobalt-site .site-header,
+.cobalt-site .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 16px; }
+.cobalt-site .site-header { border-bottom: 1px solid var(--line); }
+.cobalt-site .site-header nav, .cobalt-site .site-footer nav { display: flex; align-items: center; gap: 12px 24px; flex-wrap: wrap; }
+.cobalt-site .site-header a, .cobalt-site .site-footer a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.cobalt-site .wordmark { color: var(--ink); font-size: 21px; font-weight: 700; letter-spacing: -.035em; }
+.cobalt-site h1, .cobalt-site h2, .cobalt-site h3 { margin: 0; text-wrap: balance; }
+.cobalt-site h1 { font-size: clamp(44px, 7vw, 78px); line-height: 1.01; letter-spacing: -.055em; }
+.cobalt-site h1 em { color: var(--blue); font-style: normal; }
+.cobalt-site h2 { font-size: clamp(30px, 4.1vw, 48px); line-height: 1.13; letter-spacing: -.047em; }
+.cobalt-site h3 { font-size: 20px; letter-spacing: -.025em; }
+.cobalt-site .hero { display: grid; grid-template-columns: 1.28fr .72fr; gap: clamp(24px, 6vw, 78px); align-items: center; padding: 64px 0 70px; }
+.cobalt-site .lede { max-width: 33rem; margin: 20px 0; color: var(--muted); font-size: clamp(17px, 2.2vw, 22px); }
+.cobalt-site .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 25px; }
+.cobalt-site .store-button, .cobalt-site .guide-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 650; }
+.cobalt-site .store-button { color: white; background: var(--blue); text-decoration: none; border-radius: 10px; padding: 12px 18px; }
+.cobalt-site .store-button:hover { background: #173288; }
+.cobalt-site .fineprint, .cobalt-site figcaption { font-size: 14px; color: var(--muted); }
+.cobalt-site figure { margin: 0; }
+.cobalt-site figcaption { margin-top: 9px; text-align: center; }
+.cobalt-site .hero-shot { width: min(94%, 310px); justify-self: center; }
+.cobalt-site .hero-shot img, .cobalt-site .app-shot { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); }
+.cobalt-site .hero-shot img { box-shadow: 0 14px 44px rgb(30 58 133 / 12%); }
+.cobalt-site .steps-band { background: var(--wash); padding: 60px 0; }
+.cobalt-site .steps-layout { display: grid; grid-template-columns: minmax(0, .76fr) minmax(0, 1fr) minmax(0, .76fr); gap: clamp(18px, 4vw, 46px); align-items: center; margin-block: 28px; }
+.cobalt-site .steps-layout ol { padding-left: 1.5rem; margin: 0; }
+.cobalt-site .steps-layout li { padding-inline-start: 5px; margin-block: 14px; }
+.cobalt-site .steps-layout li::marker { color: var(--blue); font-weight: 750; }
+.cobalt-site .steps-layout p { margin: 4px 0 0; color: var(--muted); }
+.cobalt-site .phone-section { display: grid; grid-template-columns: 1.22fr .78fr; gap: clamp(26px, 7vw, 80px); align-items: center; padding-block: 66px; }
+.cobalt-site .phone-note { border-left: 3px solid #b7c8ff; padding: 12px 0 12px 22px; }
+.cobalt-site .phone-note p { color: var(--muted); }
+.cobalt-site .site-footer { border-top: 1px solid var(--line); }
+@media (max-width: 720px) {
+  .cobalt-site .page-wrap { width: min(560px, calc(100% - 32px)); }
+  .cobalt-site .hero, .cobalt-site .phone-section { grid-template-columns: 1fr; padding-block: 36px; }
+  .cobalt-site .hero-shot { width: min(78vw, 310px); }
+  .cobalt-site .steps-layout { grid-template-columns: 1fr 1fr; align-items: start; gap: 12px; }
+  .cobalt-site .steps-layout ol { grid-column: 1 / -1; grid-row: 1; }
+  .cobalt-site .site-header { align-items: flex-start; flex-direction: column; gap: 0; }
+  .cobalt-site .site-header nav, .cobalt-site .site-footer nav { gap: 4px 16px; }
+  .cobalt-site .site-footer { flex-wrap: wrap; }
+}

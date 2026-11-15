@@ -6,6 +6,14 @@ include_in_header: true
 
 # What's New
 
+## Version 1.5.6
+
+- Find your saved tools by clearer icons and more varied colors. The same icon appears in its chat and in Apps.
+- Preview Photo Wall with sample pictures. Choose when to load the photos you allow Leafling to access.
+- After granting Reminders access, review and confirm before you mark a reminder complete or change its due time.
+
+[Follow the updated first app guide]({{ '/updates/native-personal-apps/' | relative_url }}) · [Read the permission details]({{ '/privacypolicy/' | relative_url }}#photos-and-reminders-156)
+
 ## November 2, 2026 — Version 1.5.5 (US)
 
 Your routine, your own app. Build and refine it through chat, then run it inside Leafling on your iPhone. Use ChatGPT or your OpenAI API key; AI needs internet. Try an official example:

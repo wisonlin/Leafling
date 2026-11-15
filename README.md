@@ -1,17 +1,17 @@
 # Leafling
 
-**Build your own apps. Connected to your iPhone.**
+**Make the apps you want on your iPhone.**
 
 Create a personal app in chat, run it on your iPhone or iPad inside Leafling, and keep improving it. Connect your app to supported phone features with the access you allow.
 
 - [Download Leafling](https://apps.apple.com/us/app/leafling/id6762119069)
 - [Visit the website](https://wisonlin.github.io/Leafling/)
-- [Read the product update: personal apps connected to your iPhone](https://wisonlin.github.io/Leafling/updates/native-personal-apps/)
+- [Try Photo Wall and learn to make your first app](https://wisonlin.github.io/Leafling/updates/native-personal-apps/)
 - [Support](https://wisonlin.github.io/Leafling/support/) · [Privacy](https://wisonlin.github.io/Leafling/privacypolicy/)
 
-Personal apps use HTML, CSS, and JavaScript inside Leafling. A JSON Bridge connects supported actions to native iOS SDKs, subject to device availability and permissions. AI creation and editing require internet and an existing ChatGPT account; its usage limits apply.
+Personal apps use HTML, CSS, and JavaScript inside Leafling. A JSON Bridge connects supported actions to native iOS SDKs, subject to device availability and permissions. AI creation and editing need internet and an AI connection you set up. Use your ChatGPT account or your own OpenAI API key where available in Settings. Access, usage limits, and billing follow the connection you choose.
 
-The product update includes a real Photo Wall official-example recording with limited Photos access, and a separately labeled Voice List design concept. The recording demonstrates Photos access, saving, and first opening from Apps. It does not demonstrate AI creation or Reminders writes.
+The first app guide shows how to try Photo Wall with samples, save it, and reopen it from Apps. It also shows an example chat and a working packing checklist. Version 1.5.6 uses more distinctive icons and colors for tools in chat and in Apps.
 
 This repository contains Leafling's public website and support pages, not the iOS app source code. Generated personal apps run inside Leafling; they are not standalone iOS apps for App Store distribution.
 
