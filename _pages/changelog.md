@@ -6,7 +6,7 @@ include_in_header: true
 
 # What's New
 
-## Version 1.5.6
+## November 17, 2026 — Version 1.5.6 (US)
 
 - Find your saved tools by clearer icons and more varied colors. The same icon appears in its chat and in Apps.
 - Preview Photo Wall with sample pictures. Choose when to load the photos you allow Leafling to access.
